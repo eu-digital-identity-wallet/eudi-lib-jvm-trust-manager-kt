@@ -1,0 +1,25 @@
+[versions]
+bouncyCastle = "1.78.1"
+cbor = "4.5.3"
+cose = "1.1.0"
+dependency-check = "10.0.3"
+kotlin = "1.9.21"
+kotlin-coroutines = "1.7.3"
+sonarqube = "5.1.0.4882"
+java = "17"
+dokka = "1.9.20"
+maven-publish = "0.29.0"
+
+[libraries]
+bouncy-castle-pkix = { module = "org.bouncycastle:bcpkix-jdk18on", version.ref = "bouncyCastle" }
+bouncy-castle-prov = { module = "org.bouncycastle:bcprov-jdk18on", version.ref = "bouncyCastle" }
+cbor = { module = "com.upokecenter:cbor", version.ref = "cbor" }
+cose = { module = "com.augustcellars.cose:cose-java", version.ref = "cose" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlin-coroutines" }
+
+[plugins]
+dependency-check = { id = "org.owasp.dependencycheck", version.ref = "dependency-check" }
+sonarqube = { id = "org.sonarqube", version.ref = "sonarqube" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
